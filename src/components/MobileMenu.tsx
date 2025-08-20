@@ -1,4 +1,8 @@
-import { Link as ScrollLink } from "react-scroll";
+import type { ComponentType, ReactNode } from "react";
+import type { LinkProps } from "react-scroll";
+import { Link as ScrollLinkBase } from "react-scroll";
+const ScrollLink =
+  ScrollLinkBase as unknown as ComponentType<LinkProps & { children?: ReactNode }>;
 import { useGlobalContext } from "../context/globalContext";
 
 const MobileMenu = () => {

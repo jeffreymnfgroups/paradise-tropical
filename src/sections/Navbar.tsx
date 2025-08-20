@@ -1,5 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import type { ComponentType, ReactNode } from "react";
+import type { LinkProps } from "react-scroll";
+import { Link as ScrollLinkBase } from "react-scroll";
+const ScrollLink =
+  ScrollLinkBase as unknown as ComponentType<LinkProps & { children?: ReactNode }>;
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileMenu from "../components/MobileMenu";
 import { useGlobalContext } from "../context/globalContext";

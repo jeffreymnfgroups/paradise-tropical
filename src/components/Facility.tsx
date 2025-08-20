@@ -1,7 +1,11 @@
 import { useState } from "react";
 import arrow from "../assets/fArrow.svg";
 import roomBtn from "../assets/roomBtn.svg";
-import { Link as ScrollLink } from "react-scroll";
+import type { ComponentType, ReactNode } from "react";
+import type { LinkProps } from "react-scroll";
+import { Link as ScrollLinkBase } from "react-scroll";
+const ScrollLink =
+  ScrollLinkBase as unknown as ComponentType<LinkProps & { children?: ReactNode }>;
 
 type FacilityPropType = {
   facility: {
